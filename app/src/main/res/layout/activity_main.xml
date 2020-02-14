@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.materialpractice.DragLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/bar">
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorAccent" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary" />
+    </com.example.materialpractice.DragLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Noelevation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabCradleMargin="8dp"
+        app:fabCradleRoundedCornerRadius="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchor="@+id/bar"
+        app:srcCompat="@drawable/ic_edit" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
